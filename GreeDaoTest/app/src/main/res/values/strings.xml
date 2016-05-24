@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GreeDaoTest</string>
+    <string name="add">add</string>
+    <string name="delete">delete</string>
+    <string name="update">update</string>
+    <string name="query">query</string>
+</resources>

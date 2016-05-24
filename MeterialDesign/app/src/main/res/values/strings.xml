@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MeterialDesign</string>
+    <string name="recycleView">RecycleView</string>
+</resources>
