@@ -8,4 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="card_text_bg">
+        <item name="android:textColor">@color/card_text</item>
+        </style>
+
 </resources>
