@@ -27,7 +27,6 @@ public class RecycleViewActivity extends AppCompatActivity {
 
     RecyclerView mRecyclerView;
     HomeAdapter mHomeAdapter;
-    List<String> mInfoList = new ArrayList<>();
     private static final String TAG = "PengLog";
 
     private String PERMISSIONS[] = {Manifest.permission.READ_CONTACTS};
