@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     ImageView mImg;
     Button mRecycleBt;
+    Button mcodeBt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +34,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initViews(){
         mImg = (ImageView) findViewById(R.id.img);
         mRecycleBt = (Button) findViewById(R.id.recycleView);
+        assert mRecycleBt != null;
         mRecycleBt.setOnClickListener(this);
+        mcodeBt = (Button) findViewById(R.id.makecode);
+        assert mcodeBt != null;
+        mcodeBt.setOnClickListener(this);
     }
 
     private void testNotification() {
@@ -83,6 +88,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(makeRecycleViewIntent());
                 break;
 
+            case R.id.makecode:
+                startActivity(makeCodeIntent());
+
             default:
                 break;
         }
@@ -93,4 +101,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mIntent.setClass(this,RecycleViewActivity.class);
         return mIntent;
     }
+
+    private Intent makeCodeIntent(){
+        Intent mIntent = new Intent();
+        mIntent.setClass(this,MakeCodeActivity.class);
+        return mIntent;
+    }
+
 }

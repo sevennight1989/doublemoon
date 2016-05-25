@@ -1,0 +1,27 @@
+package lk.meterialdesign;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.ImageView;
+
+import com.google.zxing.WriterException;
+
+public class MakeCodeActivity extends AppCompatActivity {
+
+    ImageView codeImg;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_make_code);
+        initLayout();
+    }
+
+    private void initLayout(){
+        codeImg = (ImageView) findViewById(R.id.code);
+        try {
+            codeImg.setImageBitmap(CodeUtils.Create2DCode("ZhangSan"));
+        } catch (WriterException e) {
+            e.printStackTrace();
+        }
+    }
+}
