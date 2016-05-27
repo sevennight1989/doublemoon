@@ -23,6 +23,9 @@ import com.baidu.android.pushservice.CustomPushNotificationBuilder;
 import com.baidu.android.pushservice.PushConstants;
 import com.baidu.android.pushservice.PushManager;
 
+import lk.meterialdesign.chat.ChatActivity;
+import lk.meterialdesign.code.MakeCodeActivity;
+import lk.meterialdesign.code.RecycleViewActivity;
 import lk.meterialdesign.push.Utils;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{

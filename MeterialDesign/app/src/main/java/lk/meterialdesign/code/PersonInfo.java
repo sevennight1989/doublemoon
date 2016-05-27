@@ -1,4 +1,4 @@
-package lk.meterialdesign;
+package lk.meterialdesign.code;
 
 /**
  * Created by uiprj on 5/25/16.

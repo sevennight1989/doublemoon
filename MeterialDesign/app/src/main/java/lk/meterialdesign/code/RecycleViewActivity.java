@@ -1,4 +1,4 @@
-package lk.meterialdesign;
+package lk.meterialdesign.code;
 
 import android.Manifest;
 import android.content.ContentResolver;
@@ -22,6 +22,9 @@ import com.google.zxing.WriterException;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import lk.meterialdesign.PermissionUtils;
+import lk.meterialdesign.R;
 
 public class RecycleViewActivity extends AppCompatActivity {
 

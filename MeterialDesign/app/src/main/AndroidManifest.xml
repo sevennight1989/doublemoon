@@ -32,9 +32,9 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".RecycleViewActivity">
+        <activity android:name=".code.RecycleViewActivity">
         </activity>
-        <activity android:name=".MakeCodeActivity">
+        <activity android:name=".code.MakeCodeActivity">
         </activity>
 
         <!-- push富媒体，使用富媒体推送必须声明 -->
@@ -111,7 +111,7 @@
             android:name="api_key"
             android:value="TW34vyWDomDiTxrt0wPsNFas"/>
 
-        <activity android:name=".ChatActivity">
+        <activity android:name=".chat.ChatActivity">
         </activity>
     </application>
 

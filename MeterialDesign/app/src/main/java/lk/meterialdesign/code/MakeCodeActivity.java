@@ -1,4 +1,4 @@
-package lk.meterialdesign;
+package lk.meterialdesign.code;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.widget.ImageView;
 
 import com.google.zxing.WriterException;
+
+import lk.meterialdesign.R;
 
 public class MakeCodeActivity extends AppCompatActivity {
 

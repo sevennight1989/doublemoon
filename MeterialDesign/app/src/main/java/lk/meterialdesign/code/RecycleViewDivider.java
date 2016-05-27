@@ -1,4 +1,4 @@
-package lk.meterialdesign;
+package lk.meterialdesign.code;
 
 import android.content.Context;
 import android.content.res.TypedArray;
