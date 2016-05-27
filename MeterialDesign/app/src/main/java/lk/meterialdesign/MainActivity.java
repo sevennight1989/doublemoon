@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ImageView mImg;
     Button mRecycleBt;
     Button mcodeBt;
+    Button mChat;
     int akBtnId = 0;
     int initBtnId = 0;
     int richBtnId = 0;
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         initPushCOnfig();
         initViews();
-        testNotification();
+//        testNotification();
 
 
 
@@ -105,12 +106,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void initViews(){
         mImg = (ImageView) findViewById(R.id.img);
+        mImg.setVisibility(View.GONE);
         mRecycleBt = (Button) findViewById(R.id.recycleView);
-        assert mRecycleBt != null;
         mRecycleBt.setOnClickListener(this);
         mcodeBt = (Button) findViewById(R.id.makecode);
-        assert mcodeBt != null;
         mcodeBt.setOnClickListener(this);
+        mChat = (Button) findViewById(R.id.chat);
+        mChat.setOnClickListener(this);
     }
 
     private void testNotification() {
@@ -162,7 +164,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.makecode:
                 startActivity(makeCodeIntent());
+                break;
 
+            case R.id.chat:
+                startActivity(makeCharIntent());
             default:
                 break;
         }
@@ -177,6 +182,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Intent makeCodeIntent(){
         Intent mIntent = new Intent();
         mIntent.setClass(this,MakeCodeActivity.class);
+        return mIntent;
+    }
+
+    private Intent makeCharIntent(){
+        Intent mIntent = new Intent();
+        mIntent.setClass(this,ChatActivity.class);
         return mIntent;
     }
 

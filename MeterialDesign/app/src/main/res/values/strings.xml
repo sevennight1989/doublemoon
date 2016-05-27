@@ -4,4 +4,5 @@
     <string name="makecode">MakeCode</string>
     <string name="phone">Phone:&#160;</string>
     <string name="email">Email:&#160;</string>
+    <string name="chat">Chat</string>
 </resources>
