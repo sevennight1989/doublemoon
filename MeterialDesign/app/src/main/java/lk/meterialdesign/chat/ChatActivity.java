@@ -46,10 +46,10 @@ public class ChatActivity extends AppCompatActivity {
             ChatMsgEntity chatMsgEntity = new ChatMsgEntity();
             chatMsgEntity.setDate(dataArray[i]);
             if(i%2==0){
-                chatMsgEntity.setName("张三");
+                chatMsgEntity.setName("A");
                 chatMsgEntity.setMsgType(true);
             }else{
-                chatMsgEntity.setName("我");
+                chatMsgEntity.setName("B");
                 chatMsgEntity.setMsgType(false);
             }
             chatMsgEntity.setMessage(msgArray[i]);
