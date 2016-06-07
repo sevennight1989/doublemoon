@@ -27,6 +27,7 @@ import lk.meterialdesign.chat.ChatActivity;
 import lk.meterialdesign.code.MakeCodeActivity;
 import lk.meterialdesign.code.RecycleViewActivity;
 import lk.meterialdesign.push.Utils;
+import lk.meterialdesign.settings.SettingActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button mRecycleBt;
     Button mcodeBt;
     Button mChat;
+    Button mSettings;
     int akBtnId = 0;
     int initBtnId = 0;
     int richBtnId = 0;
@@ -116,6 +118,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mcodeBt.setOnClickListener(this);
         mChat = (Button) findViewById(R.id.chat);
         mChat.setOnClickListener(this);
+        mSettings = (Button) findViewById(R.id.settings);
+        mSettings.setOnClickListener(this);
     }
 
     private void testNotification() {
@@ -171,6 +175,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.chat:
                 startActivity(makeCharIntent());
+                break;
+
+            case R.id.settings:
+                startActivity(makeSettingIntent());
+                break;
             default:
                 break;
         }
@@ -193,5 +202,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mIntent.setClass(this,ChatActivity.class);
         return mIntent;
     }
+
+    private Intent makeSettingIntent(){
+        Intent mIntent = new Intent();
+        mIntent.setClass(this, SettingActivity.class);
+        return mIntent;
+    }
+
 
 }

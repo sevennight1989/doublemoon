@@ -113,6 +113,8 @@
 
         <activity android:name=".chat.ChatActivity">
         </activity>
+        <activity android:name=".settings.SettingActivity">
+        </activity>
     </application>
 
 </manifest>

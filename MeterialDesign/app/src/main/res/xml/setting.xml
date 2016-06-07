@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="show_status_bar_icon"
+        android:persistent="false"
+        android:summary="@string/show_status_bar_icon_summary"
+        android:title="@string/show_status_bar_icon_title" />
+</PreferenceScreen>
