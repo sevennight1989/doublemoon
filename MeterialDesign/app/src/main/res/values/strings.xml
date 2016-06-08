@@ -6,9 +6,14 @@
     <string name="email">Email:&#160;</string>
     <string name="chat">Chat</string>
     <string name="settings">settings</string>
+    <string name="color">Color</string>
+    <string name="saturation">saturation 0 - 20 </string>
     <!-- Setting title for showing/hiding the alarm status bar icon -->
     <string name="show_status_bar_icon_title">Show icon</string>
 
     <!-- Setting summary for showing/hiding the alarm statusbar icon -->
     <string name="show_status_bar_icon_summary">Show an icon in the status bar when an alarm is set</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

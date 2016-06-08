@@ -26,6 +26,7 @@ import com.baidu.android.pushservice.PushManager;
 import lk.meterialdesign.chat.ChatActivity;
 import lk.meterialdesign.code.MakeCodeActivity;
 import lk.meterialdesign.code.RecycleViewActivity;
+import lk.meterialdesign.color.ColorListActivity;
 import lk.meterialdesign.push.Utils;
 import lk.meterialdesign.settings.SettingActivity;
 
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button mcodeBt;
     Button mChat;
     Button mSettings;
+    Button mColor;
     int akBtnId = 0;
     int initBtnId = 0;
     int richBtnId = 0;
@@ -120,6 +122,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mChat.setOnClickListener(this);
         mSettings = (Button) findViewById(R.id.settings);
         mSettings.setOnClickListener(this);
+        mColor = (Button) findViewById(R.id.color);
+        mColor.setOnClickListener(this);
     }
 
     private void testNotification() {
@@ -180,6 +184,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.settings:
                 startActivity(makeSettingIntent());
                 break;
+
+            case R.id.color:
+                startActivity(makeColorActivity());
+                break;
             default:
                 break;
         }
@@ -209,5 +217,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return mIntent;
     }
 
+    private Intent makeColorActivity(){
+        Intent mIntent = new Intent();
+        mIntent.setClass(this, ColorListActivity.class);
+        return mIntent;
+    }
 
 }

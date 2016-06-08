@@ -60,6 +60,12 @@
             android:text="@string/settings"
             android:layout_below="@+id/chat"/>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/color"
+            android:layout_below="@+id/settings"
+            android:text="@string/color"/>
 
     </RelativeLayout>
 
