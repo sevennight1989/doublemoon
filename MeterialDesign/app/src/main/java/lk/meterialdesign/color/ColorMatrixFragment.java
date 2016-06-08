@@ -90,8 +90,8 @@ public class ColorMatrixFragment extends Fragment {
         originBp = BitmapFactory.decodeResource(getResources(),R.mipmap.dog);
         tempBp = Bitmap.createBitmap(originBp.getWidth(),originBp.getHeight(), Bitmap.Config
         .ARGB_8888);
-        mSeekBar.setMax(20);
-        mSeekBar.setProgress(1);
+        mSeekBar.setMax(360);
+        mSeekBar.setProgress(180);
         mSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -118,7 +118,8 @@ public class ColorMatrixFragment extends Fragment {
         Paint paint = new Paint();
         paint.setAntiAlias(true);
         ColorMatrix colorMatrix = new ColorMatrix();
-        colorMatrix.setSaturation(progress);
+//        colorMatrix.setSaturation(progress);
+        colorMatrix.setRotate(0,progress-180);
         paint.setColorFilter(new ColorMatrixColorFilter(colorMatrix));
         canvas.drawBitmap(originBp,0,0,paint);
         return tempBp;
