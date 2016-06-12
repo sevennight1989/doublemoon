@@ -7,6 +7,7 @@
     <string name="chat">Chat</string>
     <string name="settings">settings</string>
     <string name="color">Color</string>
+    <string name="views">Views</string>
     <string name="saturation">saturation 0 - 20 </string>
     <!-- Setting title for showing/hiding the alarm status bar icon -->
     <string name="show_status_bar_icon_title">Show icon</string>

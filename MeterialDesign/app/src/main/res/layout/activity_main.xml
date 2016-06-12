@@ -67,6 +67,13 @@
             android:layout_below="@+id/settings"
             android:text="@string/color"/>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/views"
+            android:layout_below="@+id/color"
+            android:text="@string/views"/>
+
     </RelativeLayout>
 
 

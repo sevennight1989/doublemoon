@@ -27,10 +27,11 @@ import lk.meterialdesign.chat.ChatActivity;
 import lk.meterialdesign.code.MakeCodeActivity;
 import lk.meterialdesign.code.RecycleViewActivity;
 import lk.meterialdesign.color.ColorListActivity;
+import lk.meterialdesign.color.ViewListActivity;
 import lk.meterialdesign.push.Utils;
 import lk.meterialdesign.settings.SettingActivity;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     ImageView mImg;
     Button mRecycleBt;
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button mChat;
     Button mSettings;
     Button mColor;
+    Button mViews;
     int akBtnId = 0;
     int initBtnId = 0;
     int richBtnId = 0;
@@ -57,11 +59,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        testNotification();
 
 
-
     }
 
 
-    private void initPushCOnfig(){
+    private void initPushCOnfig() {
         // checkApikey();
         Utils.logStringCache = Utils.getLogText(getApplicationContext());
 
@@ -111,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         PushManager.setNotificationBuilder(this, 1, cBuilder);
     }
 
-    private void initViews(){
+    private void initViews() {
         mImg = (ImageView) findViewById(R.id.img);
         mImg.setVisibility(View.GONE);
         mRecycleBt = (Button) findViewById(R.id.recycleView);
@@ -124,6 +125,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mSettings.setOnClickListener(this);
         mColor = (Button) findViewById(R.id.color);
         mColor.setOnClickListener(this);
+        mViews = (Button) findViewById(R.id.views);
+        mViews.setOnClickListener(this);
     }
 
     private void testNotification() {
@@ -131,8 +134,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         builder.setSmallIcon(R.mipmap.ic_launcher);
         builder.setContentTitle("Material");
         builder.setContentText("New Message");
-        Intent intent = new Intent(this,MainActivity.class);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this,0,intent,0);
+        Intent intent = new Intent(this, MainActivity.class);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
         builder.setContentIntent(pendingIntent);
         Notification nf = builder.build();
         NotificationManager nfm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
@@ -168,7 +171,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.recycleView:
                 startActivity(makeRecycleViewIntent());
                 break;
@@ -188,38 +191,49 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.color:
                 startActivity(makeColorActivity());
                 break;
+
+            case R.id.views:
+                startActivity(makeViewsActivity());
+                break;
+
             default:
                 break;
         }
     }
 
-    private Intent makeRecycleViewIntent(){
+    private Intent makeRecycleViewIntent() {
         Intent mIntent = new Intent();
-        mIntent.setClass(this,RecycleViewActivity.class);
+        mIntent.setClass(this, RecycleViewActivity.class);
         return mIntent;
     }
 
-    private Intent makeCodeIntent(){
+    private Intent makeCodeIntent() {
         Intent mIntent = new Intent();
-        mIntent.setClass(this,MakeCodeActivity.class);
+        mIntent.setClass(this, MakeCodeActivity.class);
         return mIntent;
     }
 
-    private Intent makeCharIntent(){
+    private Intent makeCharIntent() {
         Intent mIntent = new Intent();
-        mIntent.setClass(this,ChatActivity.class);
+        mIntent.setClass(this, ChatActivity.class);
         return mIntent;
     }
 
-    private Intent makeSettingIntent(){
+    private Intent makeSettingIntent() {
         Intent mIntent = new Intent();
         mIntent.setClass(this, SettingActivity.class);
         return mIntent;
     }
 
-    private Intent makeColorActivity(){
+    private Intent makeColorActivity() {
         Intent mIntent = new Intent();
         mIntent.setClass(this, ColorListActivity.class);
+        return mIntent;
+    }
+
+    private Intent makeViewsActivity() {
+        Intent mIntent = new Intent();
+        mIntent.setClass(this, ViewListActivity.class);
         return mIntent;
     }
 

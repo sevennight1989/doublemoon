@@ -45,6 +45,13 @@
             android:layout_width="400dp"
             android:layout_height="610dp"
             android:layout_below="@+id/imgscale"/>
+
+        <lk.meterialdesign.color.view.XferModeView
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:id="@+id/xfermodeview"
+            android:layout_below="@+id/colorlightfiter"/>
     </RelativeLayout>
+
 
 </ScrollView>
