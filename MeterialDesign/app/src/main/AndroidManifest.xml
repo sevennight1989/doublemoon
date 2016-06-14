@@ -119,7 +119,7 @@
         </activity>
         <activity android:name=".color.ViewListActivity">
         </activity>
-        <activity android:name=".color.view.GuaGuaCardViewActivity">
+        <activity android:name=".color.GuaGuaCardViewActivity">
         </activity>
         <activity android:name=".color.HeartActivity">
         </activity>

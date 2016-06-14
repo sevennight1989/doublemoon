@@ -1,4 +1,4 @@
-package lk.meterialdesign.color.view;
+package lk.meterialdesign.color;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
