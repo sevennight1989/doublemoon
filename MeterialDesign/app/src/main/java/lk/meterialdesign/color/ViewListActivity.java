@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +25,9 @@ public class ViewListActivity extends AppCompatActivity {
     String[] mDatas;
 
     private static final int GUAGUACARDVIEW = 0;
+    private static final int HEARTVIEW = 1;
+    private static final int WAVEVIEW = 2;
+    private static final int BESSEL = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +64,18 @@ public class ViewListActivity extends AppCompatActivity {
                     switch (position) {
                         case GUAGUACARDVIEW:
                             mIntent.setClass(ViewListActivity.this, GuaGuaCardViewActivity.class);
+                            startActivity(mIntent);
+                            break;
+                        case HEARTVIEW:
+                            mIntent.setClass(ViewListActivity.this, HeartActivity.class);
+                            startActivity(mIntent);
+                            break;
+                        case WAVEVIEW:
+                            mIntent.setClass(ViewListActivity.this, WaveActivity.class);
+                            startActivity(mIntent);
+                            break;
+                        case BESSEL:
+                            mIntent.setClass(ViewListActivity.this, BesselActivity.class);
                             startActivity(mIntent);
                             break;
                         default:

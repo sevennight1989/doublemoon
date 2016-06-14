@@ -121,6 +121,12 @@
         </activity>
         <activity android:name=".color.view.GuaGuaCardViewActivity">
         </activity>
+        <activity android:name=".color.HeartActivity">
+        </activity>
+        <activity android:name=".color.WaveActivity">
+        </activity>
+        <activity android:name=".color.BesselActivity">
+        </activity>
     </application>
 
 </manifest>

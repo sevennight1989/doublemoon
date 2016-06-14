@@ -2,5 +2,8 @@
 <resources>
     <string-array name="viewlist">
         <item>GuaGuaCardView</item>
+        <item>HeartView</item>
+        <item>WaveView</item>
+        <item>Bessel</item>
     </string-array>
 </resources>
