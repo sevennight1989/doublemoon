@@ -25,6 +25,7 @@ public class ViewListActivity extends AppCompatActivity {
     private static final int WAVEVIEW = 2;
     private static final int BESSEL = 3;
     private static final int NUMBERCOUNT = 4;
+    private static final int OBJECTANIMATIOR = 5;
 
 
     @Override
@@ -78,6 +79,10 @@ public class ViewListActivity extends AppCompatActivity {
                             break;
                         case NUMBERCOUNT:
                             mIntent.setClass(ViewListActivity.this, NumberCountActivity.class);
+                            startActivity(mIntent);
+                            break;
+                        case OBJECTANIMATIOR:
+                            mIntent.setClass(ViewListActivity.this, ObjectAnimatorActivity.class);
                             startActivity(mIntent);
                             break;
                         default:

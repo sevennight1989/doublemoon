@@ -6,5 +6,6 @@
         <item>WaveView</item>
         <item>Bessel</item>
         <item>NumberCountView</item>
+        <item>ObjectAnimatorView</item>
     </string-array>
 </resources>

@@ -129,6 +129,8 @@
         </activity>
         <activity android:name=".color.view.NumberCountActivity">
         </activity>
+        <activity android:name=".color.ObjectAnimatorActivity">
+        </activity>
     </application>
 
 </manifest>
