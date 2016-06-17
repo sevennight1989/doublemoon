@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import lk.meterialdesign.R;
 import lk.meterialdesign.code.RecycleViewDivider;
+import lk.meterialdesign.color.view.NumberCountActivity;
 
 public class ViewListActivity extends AppCompatActivity {
 
@@ -23,6 +24,8 @@ public class ViewListActivity extends AppCompatActivity {
     private static final int HEARTVIEW = 1;
     private static final int WAVEVIEW = 2;
     private static final int BESSEL = 3;
+    private static final int NUMBERCOUNT = 4;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +74,10 @@ public class ViewListActivity extends AppCompatActivity {
                             break;
                         case BESSEL:
                             mIntent.setClass(ViewListActivity.this, BesselActivity.class);
+                            startActivity(mIntent);
+                            break;
+                        case NUMBERCOUNT:
+                            mIntent.setClass(ViewListActivity.this, NumberCountActivity.class);
                             startActivity(mIntent);
                             break;
                         default:

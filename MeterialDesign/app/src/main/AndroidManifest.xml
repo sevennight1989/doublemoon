@@ -127,6 +127,8 @@
         </activity>
         <activity android:name=".color.BesselActivity">
         </activity>
+        <activity android:name=".color.view.NumberCountActivity">
+        </activity>
     </application>
 
 </manifest>

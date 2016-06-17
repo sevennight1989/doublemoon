@@ -5,5 +5,6 @@
         <item>HeartView</item>
         <item>WaveView</item>
         <item>Bessel</item>
+        <item>NumberCountView</item>
     </string-array>
 </resources>
