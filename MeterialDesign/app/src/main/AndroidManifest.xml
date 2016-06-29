@@ -131,6 +131,8 @@
         </activity>
         <activity android:name=".color.ObjectAnimatorActivity">
         </activity>
+        <activity android:name=".ioc.IOCActivity">
+        </activity>
     </application>
 
 </manifest>
