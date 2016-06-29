@@ -10,7 +10,7 @@ import android.widget.TextView;
 import lk.meterialdesign.R;
 
 @ContentView(value = R.layout.activity_ioc)
-public class IOCActivity extends AppCompatActivity implements View.OnClickListener{
+public class IOCActivity extends AppCompatActivity{
 
     @ViewInject(R.id.ioc_tv)
     private TextView mIoctv;
@@ -18,15 +18,27 @@ public class IOCActivity extends AppCompatActivity implements View.OnClickListen
     @ViewInject(R.id.ioc_bt)
     private Button mIocBt;
 
+    @ViewInject(R.id.ioc_bt2)
+    private Button mIocBt2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ViewInjectUtils.init(this);
-        mIocBt.setOnClickListener(this);
     }
 
-    @Override
-    public void onClick(View v) {
+    @OnClick({R.id.ioc_bt,R.id.ioc_bt2})
+    public void  clickBtnInvoked(View view){
+        switch (view.getId()){
+            case R.id.ioc_bt:
 
+                break;
+
+            case R.id.ioc_bt2:
+
+                break;
+            default:
+                break;
+        }
     }
 }
