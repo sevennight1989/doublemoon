@@ -133,6 +133,10 @@
         </activity>
         <activity android:name=".ioc.IOCActivity">
         </activity>
+        <activity android:name=".net.NetActivity">
+        </activity>
+        <activity android:name=".cust.CustActivity">
+        </activity>
     </application>
 
 </manifest>

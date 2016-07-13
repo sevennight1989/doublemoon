@@ -16,7 +16,7 @@ public class DynamicHandler implements InvocationHandler {
     private final HashMap<String,Method> methodMap = new HashMap<>(1);
 
     public DynamicHandler(Object handler){
-        handlerRef = new WeakReference<Object>(handler);
+        handlerRef = new WeakReference<>(handler);
     }
 
     public void addMethod(String name,Method method){
@@ -28,7 +28,7 @@ public class DynamicHandler implements InvocationHandler {
     }
 
     public void setHandler(Object handler){
-        handlerRef = new WeakReference<Object>(handler);
+        handlerRef = new WeakReference<>(handler);
     }
 
 

@@ -90,7 +90,7 @@ public class ViewInjectUtils {
                             View view = activity.findViewById(viewid);
                             Method setEventListenerMethod = view.getClass().getMethod
                             (listenerSetter, listenerType);
-                            setEventListenerMethod.invoke(listener, viewid);
+                            setEventListenerMethod.invoke(listener,view);
                         }
 
 

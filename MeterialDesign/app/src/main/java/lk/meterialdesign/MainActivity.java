@@ -28,6 +28,7 @@ import lk.meterialdesign.code.MakeCodeActivity;
 import lk.meterialdesign.code.RecycleViewActivity;
 import lk.meterialdesign.color.ColorListActivity;
 import lk.meterialdesign.color.ViewListActivity;
+import lk.meterialdesign.cust.CustActivity;
 import lk.meterialdesign.push.Utils;
 import lk.meterialdesign.settings.SettingActivity;
 
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button mSettings;
     Button mColor;
     Button mViews;
+    Button mCustViews;
     int akBtnId = 0;
     int initBtnId = 0;
     int richBtnId = 0;
@@ -127,6 +129,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mColor.setOnClickListener(this);
         mViews = (Button) findViewById(R.id.views);
         mViews.setOnClickListener(this);
+        mCustViews = (Button) findViewById(R.id.custViews);
+        mCustViews.setOnClickListener(this);
     }
 
     private void testNotification() {
@@ -196,6 +200,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(makeViewsActivity());
                 break;
 
+            case R.id.custViews:
+                startActivity(makeCustViewsActivity());
+                break;
+
             default:
                 break;
         }
@@ -234,6 +242,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Intent makeViewsActivity() {
         Intent mIntent = new Intent();
         mIntent.setClass(this, ViewListActivity.class);
+        return mIntent;
+    }
+
+    private Intent makeCustViewsActivity(){
+        Intent mIntent = new Intent();
+        mIntent.setClass(this, CustActivity.class);
         return mIntent;
     }
 

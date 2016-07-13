@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <lk.meterialdesign.cust.view.CollapseView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/titleRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:clickable="true"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/numberTextView"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:layout_centerVertical="true"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@+id/numberTextView"
+                android:clickable="false"
+                android:text="ss"
+                android:textColor="#1d953f"
+                android:textSize="25dp"/>
+
+            <ImageView
+                android:id="@+id/arrowImageView"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/arrow"
+                android:clickable="false"
+                android:scaleType="fitCenter"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_below="@id/titleRelativeLayout"
+            android:background="#22000000"
+            android:clickable="false"/>
+
+        <RelativeLayout
+            android:id="@+id/contentRelativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="400dp"
+                android:layout_height="200dp"
+                android:background="@mipmap/fengjing"/>
+        </RelativeLayout>
+
+
+    </lk.meterialdesign.cust.view.CollapseView>
+</LinearLayout>

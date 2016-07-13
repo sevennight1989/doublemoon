@@ -74,6 +74,13 @@
             android:layout_below="@+id/color"
             android:text="@string/views"/>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/custViews"
+            android:text="@string/Custviews"
+            android:layout_below="@+id/views"/>
+
     </RelativeLayout>
 
 
