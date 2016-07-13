@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="titles">
+        <item>华住订阅号</item>
+        <item>华住公共号</item>
+    </string-array>
+</resources>
